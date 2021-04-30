@@ -1,0 +1,16 @@
+<%- include('includes/head.ejs') %>
+    <div>
+        <h1>Books</h1>
+        <% if (books.length > 0) { %>
+            <ul>
+                <% books.forEach((books) => { %>
+                    <h3> <%= books.name %> </h3>
+                    <h4> <%= books.author %> </h4>
+                    <%= books.summary %>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <h1>No books found!</h1>
+        <% } %>
+    </div>
+<%- include('includes/end.ejs') %>
