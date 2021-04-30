@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const books = [];
+var PORT = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -26,4 +27,4 @@ app.post('/add-book', (req, res, next) => {
     res.redirect('/books');
 });
 
-app.listen(5000);
+app.listen(PORT);
